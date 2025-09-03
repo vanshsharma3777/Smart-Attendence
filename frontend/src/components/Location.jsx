@@ -21,6 +21,8 @@ const Location = () => {
             }
 
             setLocation(userLocation)
+            console.log(location.latitude)
+            console.log(location.longitude)
             setError(null)
             try{
                 const res = await axios.post(`${VITE_BACKEND_URL}/location`, {
