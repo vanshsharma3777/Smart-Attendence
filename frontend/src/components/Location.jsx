@@ -1,5 +1,6 @@
 import React ,  {useState} from "react"
 import axios from "axios";
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Location = () => {
     const [location , setLocation] = useState(null)
     const [error , setError] = useState(null)
@@ -22,7 +23,7 @@ const Location = () => {
             setLocation(userLocation)
             setError(null)
             try{
-                const res = await axios.post("http://localhost:7000/location", {
+                const res = await axios.post(`${VITE_BACKEND_URL}/location`, {
                     lat:userLocation.latitude,
                     lon:userLocation.longitude
                 })
