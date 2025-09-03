@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 })
 app.post('/location', async (req, res) => {
     const myLocation = {
-        mylat: 26.915376,
-        mylon: 80.9192204
+        mylat: 26.8936,
+        mylon: 81.0283
     }
 
     const { lat, lon } = req.body;
