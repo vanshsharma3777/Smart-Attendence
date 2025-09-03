@@ -3,7 +3,7 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: "https://get-location-9x54.onrender.com",
+    origin: "https://get-location-navy.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 
