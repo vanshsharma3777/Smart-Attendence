@@ -4,6 +4,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+app.get('/' , (req,res)=>{
+    res.json('working properly')
+})
 app.post('/location', async (req, res) => {
     const myLocation = {
         mylat: 26.915376,
