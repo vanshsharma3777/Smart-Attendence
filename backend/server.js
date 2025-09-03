@@ -2,8 +2,12 @@ const express = require("express")
 const cors = require('cors')
 const app = express()
 app.use(express.json())
+const allowed_origins =[
+    "https://get-location-navy.vercel.app",
+    "http://localhost:5173"
+]   
 app.use(cors({
-    origin: "https://get-location-navy.vercel.app",
+    origin: allowed_origins,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 
