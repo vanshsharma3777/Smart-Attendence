@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const StudentDashboard = () => {
-  const [tab, setTab] = useState("upcoming");
-
+  const [tab ,setTab]=useState('past')
+  const navigate=useNavigate()
+  function getPastLectures(){
+    navigate('/student/past-lecture')
+  }
   // Student info
   const student = {
     name: "Deepak Sharma",
@@ -17,15 +21,7 @@ const StudentDashboard = () => {
     time: "Today 11 AM - 12 PM",
   };
 
-  const pastClasses = [
-    { id: 1, name: "Math", teacher: "Mr. Sharma", time: "Yesterday 10 AM - 11 AM" },
-    { id: 2, name: "Physics", teacher: "Ms. Verma", time: "Yesterday 2 PM - 3 PM" },
-  ];
 
-  const upcomingClasses = [
-    { id: 3, name: "English", teacher: "Ms. Roy", time: "Tomorrow 9 AM - 10 AM" },
-    { id: 4, name: "History", teacher: "Mr. Das", time: "Tomorrow 11 AM - 12 PM" },
-  ];
 
   const renderClassCard = (cls) => (
     <motion.div
@@ -39,8 +35,6 @@ const StudentDashboard = () => {
       <button className="mt-2 bg-blue-500 text-white px-3 py-1 rounded">Join</button>
     </motion.div>
   );
-
-  const getTabData = () => (tab === "past" ? pastClasses : upcomingClasses);
 
   return (
     <div className="min-h-screen p-6 bg-gray-100">
@@ -60,24 +54,14 @@ const StudentDashboard = () => {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex gap-4 mb-6 flex justify-center">
         <button
           className={`px-4 py-2 rounded ${tab === "past" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-          onClick={() => setTab("past")}
+          onClick={getPastLectures}
         >
           Past Classes
         </button>
-        <button
-          className={`px-4 py-2 rounded ${tab === "upcoming" ? "bg-blue-500 text-white" : "bg-gray-300"}`}
-          onClick={() => setTab("upcoming")}
-        >
-          Upcoming Classes
-        </button>
-      </div>
-
-      {/* Class Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {getTabData().map(renderClassCard)}
+        
       </div>
     </div>
   );
