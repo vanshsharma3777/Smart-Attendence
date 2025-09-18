@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard  user={{ role: "teacher" }} />} />
+          <Route path="/dashboard" element={<Dashboard  user={{ role: "student" }} />} />
           <Route path="/student/dashboard" element={<StudentDashboard />} />
           <Route path="/teacher/dashboard" element={<TeacherDashboard />} />
           <Route path="/teacher/past-lecture" element={<TeacherPastLectures />} />

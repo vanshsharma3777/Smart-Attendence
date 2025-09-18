@@ -17,8 +17,8 @@ const TeacherDashboard = () => {
 
   // Teacher info
   const teacher = {
-    name: "Dr. Rajesh Kumar",
-    email: "rajesh.kumar@university.edu",
+    name: "Mr. Shailesh Vishwakarma",
+    email: "shailesh@gmail.com",
   };
 
  const navigate = useNavigate()

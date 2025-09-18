@@ -7,9 +7,9 @@ const StudentPastLectures = () => {
   // Mock fetching function (replace with API)
   const fetchPastClasses = () => {
     const data = [
-      { id: 1, name: "Math", teacher: "Mr. Sharma", time: "Yesterday 10 AM - 11 AM" },
-      { id: 2, name: "Physics", teacher: "Ms. Verma", time: "Yesterday 2 PM - 3 PM" },
-      { id: 3, name: "AI/ML", teacher: "Dr. Rajesh Kumar", time: "2 days ago 11 AM - 12 PM" },
+      { id: 1, name: "Communicative English", teacher: "Mrs. Usha Arunima", time: "Yesterday 10 AM - 11 AM" },
+      { id: 2, name: "Matrix and Calculus", teacher: "Mrs. Vibhavari Srivastva", time: "Yesterday 2 PM - 3 PM" },
+      { id: 3, name: "ARtificial Intelligence", teacher: "Dr. Shailesh Vishwakarma", time: "2 days ago 11 AM - 12 PM" },
     ];
     setPastClasses(data);
   };

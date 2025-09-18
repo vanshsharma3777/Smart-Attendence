@@ -17,7 +17,7 @@ const StudentDashboard = () => {
   // Mock data
   const activeClass = {
     name: "AI/ML",
-    teacher: "Dr. Rajesh Kumar",
+    teacher: "Mr. Shailesh Kumar",
     time: "Today 11 AM - 12 PM",
   };
 
